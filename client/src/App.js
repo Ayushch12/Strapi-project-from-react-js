@@ -9,22 +9,22 @@ const router = createBrowserRouter([
     element:<span>Accueil</span>
   },
   {
-    path:"/Solutions/:id",
-    element:<span>Solutions d'Assurance</span>
+    path:"/Product/:id",
+    element:<span>Product</span>
   },
   {
-    path:"/Expertise/:id",
-    element:<span>Expertise & Conseils</span>
+    path:"/Products/:id",
+    element:<span>Product</span>
   },
-  {
-    path:"/Quisommes/:id",
-    element:<span>Qui Sommes-Nous
-    </span>
-  },
-  {
-    path:"/Contactez/:id",
-    element:<span>Contactez-Nous</span>
-  },
+  // {
+  //   path:"/Quisommes/:id",
+  //   element:<span>Qui Sommes-Nous
+  //   </span>
+  // },
+  // {
+  //   path:"/Contactez/:id",
+  //   element:<span>Contactez-Nous</span>
+  // },
 ])
 function App() {
   return (
