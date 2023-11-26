@@ -1,30 +1,24 @@
+
 import React from 'react'; // Import React from 'react'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './App.css';
-
+import Home from './pages/Home/Home';
+import Product from './pages/Product/Product';
+import Products from './pages/Products/Products';
 
 const router = createBrowserRouter([
   {
     path:"/",
-    element:<span>Accueil</span>
-  },
-  {
-    path:"/Product/:id",
-    element:<span>Product</span>
+    element:<Home/>
   },
   {
     path:"/Products/:id",
-    element:<span>Product</span>
+    element:<Products/>
   },
-  // {
-  //   path:"/Quisommes/:id",
-  //   element:<span>Qui Sommes-Nous
-  //   </span>
-  // },
-  // {
-  //   path:"/Contactez/:id",
-  //   element:<span>Contactez-Nous</span>
-  // },
+  {
+    path:"/Product/:id",
+    element:<Product/>
+  },
 ])
 function App() {
   return (
