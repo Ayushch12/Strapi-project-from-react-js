@@ -10,7 +10,13 @@ const BLOG = gql`
         attributes {
           Title
           Body
-          Author
+          Image{
+            data{
+              attributes{
+                url
+              }
+            }
+          }
         }
       }
     }
@@ -26,8 +32,8 @@ export default function BlogDetails() {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
 
-  const { Title, Body, Author } = data.blog.data.attributes;
-
+  const { Title, Body, Author, Image} = data.blog.data.attributes;
+console.log(data.blog.data.attributes)
   return (
     <div className="mt-2 mb-2 p-4 bg-white rounded-md">
       <div className="text-2xl">{Title}</div>
@@ -35,7 +41,7 @@ export default function BlogDetails() {
       {Image && (
         <div className="mt-2 mb-2">
           <img
-            src={Image}
+            src={"http://localhost:1337"+Image.data.attributes.url}
             alt={`Blog Cover - ${Title}`}
             style={{ maxWidth: "100%" }}
           />
@@ -52,3 +58,7 @@ export default function BlogDetails() {
     </div>
   );
 }
+
+
+
+
