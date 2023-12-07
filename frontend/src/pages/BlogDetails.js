@@ -32,6 +32,7 @@ export default function BlogDetails() {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
 
+  // Added here
   const { Title, Body, Author, Image} = data.blog.data.attributes;
 console.log(data.blog.data.attributes)
   return (

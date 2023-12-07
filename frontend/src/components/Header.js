@@ -4,7 +4,7 @@ export default function Header() {
   return (
       <Link to={`/`}>
         <h2 className='text-3xl text-purple-600'>
-          Strapi React Blog
+          Strapi React Blog33
         </h2>
       </Link>
   );
