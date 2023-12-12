@@ -61,5 +61,3 @@ console.log(data.blog.data.attributes)
 }
 
 
-
-
